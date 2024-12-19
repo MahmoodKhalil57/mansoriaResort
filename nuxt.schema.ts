@@ -11,40 +11,36 @@ export default defineNuxtSchema({
           icon: 'i-icon-to-display',
           fields: {
             paragraphOne: group({
-              title: 'Field title',
+              title: 'Paragraph One',
               icon: 'i-icon-to-display',
               fields: {
                 en: field({
-                  type: 'object',
-                  title: 'Field title',
-                  description: 'Field description',
+                  type: 'string',
+                  title: 'en',
                   default: 'Default value',
                   icon: 'i-icon-to-display',
                 }),
                 ar: field({
-                  type: 'object',
-                  title: 'Field title',
-                  description: 'Field description',
+                  type: 'string',
+                  title: 'ar',
                   default: 'Default value',
                   icon: 'i-icon-to-display',
                 })
               }
             }),
             paragraphTwo: group({
-              title: 'Field title',
+              title: 'Paragraph Two',
               icon: 'i-icon-to-display',
               fields: {
                 en: field({
-                  type: 'object',
-                  title: 'Field title',
-                  description: 'Field description',
+                  type: 'string',
+                  title: 'en',
                   default: 'Default value',
                   icon: 'i-icon-to-display',
                 }),
                 ar: field({
-                  type: 'object',
-                  title: 'Field title',
-                  description: 'Field description',
+                  type: 'string',
+                  title: 'ar',
                   default: 'Default value',
                   icon: 'i-icon-to-display',
                 })
