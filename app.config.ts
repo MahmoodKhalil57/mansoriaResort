@@ -13,4 +13,33 @@ export default defineAppConfig({
       "icon-menu": "i-material-symbols-menu-rounded",
     },
   },
+
+  Language: {
+    navigation: {
+      home: {
+        en: "Home",
+        ar: "رئيسي",
+      },
+
+      offerings: {
+        en: "Offerings",
+        ar: "العروض",
+      },
+
+      about: {
+        en: "About",
+        ar: "من نحن",
+      },
+
+      gallery: {
+        en: "Gallery",
+        ar: "الصور",
+      },
+
+      contact: {
+        en: "Contact",
+        ar: "اتصل بنا",
+      },
+    },
+  },
 });
