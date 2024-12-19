@@ -7,12 +7,10 @@ export default defineNuxtSchema({
       icon: 'i-icon-to-display',
       fields: {
         homePage: group({
-          type: 'object',
           title: 'Home Page',
           icon: 'i-icon-to-display',
           fields: {
             paragraphOne: group({
-              type: 'object',
               title: 'Field title',
               icon: 'i-icon-to-display',
               fields: {
@@ -33,7 +31,6 @@ export default defineNuxtSchema({
               }
             }),
             paragraphTwo: group({
-              type: 'object',
               title: 'Field title',
               icon: 'i-icon-to-display',
               fields: {
