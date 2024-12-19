@@ -5,5 +5,13 @@ export default defineAppConfig({
     twitter: 'Atinux',
     github: 'Atinux/content-wind',
     mastodon: '@atinux@webtoo.ls'
+  },
+  translations: {
+    en: {
+      title: 'Content Wind',
+    },
+    ar: {
+      title: 'Content Wind2',
+    }
   }
 })
