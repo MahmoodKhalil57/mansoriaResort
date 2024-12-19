@@ -6,12 +6,12 @@ export default defineNuxtSchema({
       title: 'Parent title',
       icon: 'i-icon-to-display',
       fields: {
-        homePage: field({
+        homePage: group({
           type: 'object',
           title: 'Home Page',
           icon: 'i-icon-to-display',
           fields: {
-            paragraphOne: field({
+            paragraphOne: group({
               type: 'object',
               title: 'Field title',
               icon: 'i-icon-to-display',
@@ -32,7 +32,7 @@ export default defineNuxtSchema({
                 })
               }
             }),
-            paragraphTwo: field({
+            paragraphTwo: group({
               type: 'object',
               title: 'Field title',
               icon: 'i-icon-to-display',
@@ -56,6 +56,58 @@ export default defineNuxtSchema({
           }
         })
       }
+
+      // fields: {
+      //   homePage: field({
+      //     type: 'object',
+      //     title: 'Home Page',
+      //     icon: 'i-icon-to-display',
+      //     fields: {
+      //       paragraphOne: field({
+      //         type: 'object',
+      //         title: 'Field title',
+      //         icon: 'i-icon-to-display',
+      //         fields: {
+      //           en: field({
+      //             type: 'object',
+      //             title: 'Field title',
+      //             description: 'Field description',
+      //             default: 'Default value',
+      //             icon: 'i-icon-to-display',
+      //           }),
+      //           ar: field({
+      //             type: 'object',
+      //             title: 'Field title',
+      //             description: 'Field description',
+      //             default: 'Default value',
+      //             icon: 'i-icon-to-display',
+      //           })
+      //         }
+      //       }),
+      //       paragraphTwo: field({
+      //         type: 'object',
+      //         title: 'Field title',
+      //         icon: 'i-icon-to-display',
+      //         fields: {
+      //           en: field({
+      //             type: 'object',
+      //             title: 'Field title',
+      //             description: 'Field description',
+      //             default: 'Default value',
+      //             icon: 'i-icon-to-display',
+      //           }),
+      //           ar: field({
+      //             type: 'object',
+      //             title: 'Field title',
+      //             description: 'Field description',
+      //             default: 'Default value',
+      //             icon: 'i-icon-to-display',
+      //           })
+      //         }
+      //       })
+      //     }
+      //   })
+      // }
     })
   }
 })
