@@ -2,17 +2,58 @@ import { field, group } from '@nuxthq/studio/theme'
 
 export default defineNuxtSchema({
   appConfig: {
-    parent: group({
+    Language: group({
       title: 'Parent title',
-      description: 'Parent description.',
       icon: 'i-icon-to-display',
       fields: {
-        leaf: field({
-          type: 'string',
-          title: 'Field title',
-          description: 'Field Description',
+        homePage: field({
+          type: 'object',
+          title: 'Home Page',
           icon: 'i-icon-to-display',
-          default: 'default value'
+          fields: {
+            paragraphOne: field({
+              type: 'object',
+              title: 'Field title',
+              icon: 'i-icon-to-display',
+              fields: {
+                en: field({
+                  type: 'object',
+                  title: 'Field title',
+                  description: 'Field description',
+                  default: 'Default value',
+                  icon: 'i-icon-to-display',
+                }),
+                ar: field({
+                  type: 'object',
+                  title: 'Field title',
+                  description: 'Field description',
+                  default: 'Default value',
+                  icon: 'i-icon-to-display',
+                })
+              }
+            }),
+            paragraphTwo: field({
+              type: 'object',
+              title: 'Field title',
+              icon: 'i-icon-to-display',
+              fields: {
+                en: field({
+                  type: 'object',
+                  title: 'Field title',
+                  description: 'Field description',
+                  default: 'Default value',
+                  icon: 'i-icon-to-display',
+                }),
+                ar: field({
+                  type: 'object',
+                  title: 'Field title',
+                  description: 'Field description',
+                  default: 'Default value',
+                  icon: 'i-icon-to-display',
+                })
+              }
+            })
+          }
         })
       }
     })
