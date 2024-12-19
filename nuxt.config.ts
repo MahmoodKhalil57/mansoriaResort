@@ -1,6 +1,15 @@
 export default defineNuxtConfig({
-  extends: 'content-wind',
+  extends: "content-wind",
+
   routeRules: {
-    '/': { prerender: true }
-  }
-})
+    "/": { prerender: true },
+  },
+
+  css: ["~/assets/css/main.css"],
+
+  devtools: {
+    enabled: true, // or false to disable
+  },
+
+  modules: ["@nuxt/image"],
+});
