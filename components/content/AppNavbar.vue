@@ -30,7 +30,10 @@ const appConfig = useAppConfig()
       </a> -->
 
       <ColorModeSwitch class="dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300" />
-      <label for="my-drawer-4" class="drawer-button btn btn-primary lg:hidden"></label>
+      <label for="my-drawer-4"
+        class="drawer-button cursor-pointer lg:hidden dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300">
+        <Icon name="icon-menu" class="w-7 h-7" />
+      </label>
 
     </div>
   </div>

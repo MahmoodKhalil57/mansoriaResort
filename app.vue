@@ -13,8 +13,7 @@ const { navigation } = useContent()
     </div>
     <div class="drawer-side">
       <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-      <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-
+      <ul class="menu text-base-content min-h-full w-80 p-4 bg-white dark:bg-[#1F2937]">
         <!-- Sidebar content here -->
         <li v-for="link of navigation" :key="link._path">
           <NuxtLink :to="link._path" active-class="font-bold" class="mr-6">
