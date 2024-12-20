@@ -66,11 +66,11 @@ const changeLang = (lang) => {
     </div>
     <div class="drawer-side">
       <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
-      <ul class="menu text-base-content min-h-full w-80 p-4 bg-white dark:bg-[#1F2937]">
+      <ul class="menu text-base-content min-h-full w-[75vw] max-w-80 sm:w-80 p-4 bg-white dark:bg-[#1F2937]">
         <div class="w-full flex justify-end">
           <label for="my-drawer-4"
-            class="drawer-button cursor-pointer lg:hidden dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300">
-            <Icon name="icon-close" class="w-7 h-7" />
+            class="drawer-button cursor-pointer dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300">
+            <Icon name="icon-cross" class="w-7 h-7" />
           </label>
         </div>
         <!-- Sidebar content here -->
