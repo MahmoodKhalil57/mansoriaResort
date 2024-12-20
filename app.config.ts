@@ -12,6 +12,7 @@ export default defineAppConfig({
     aliases: {
       "icon-menu": "i-material-symbols-menu-rounded",
       "icon-lang": "i-material-symbols-language-chinese-dayi-rounded",
+      "icon-cross": "i-material-symbols-close-rounded",
     },
   },
 
