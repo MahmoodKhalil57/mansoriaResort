@@ -53,7 +53,7 @@ const changeLang = (lang) => {
             </ul>
           </div>
 
-          <ColorModeSwitch class="dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300 flex" />
+          <!-- <ColorModeSwitch class="dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300 flex" /> -->
           <label for="my-drawer-4"
             class="drawer-button cursor-pointer lg:hidden dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300">
             <Icon name="icon-menu" class="w-7 h-7" />
