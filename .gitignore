@@ -14,3 +14,4 @@ dist
 
 # Local History
 .history
+pnpm-lock.yaml
