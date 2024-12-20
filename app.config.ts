@@ -11,6 +11,7 @@ export default defineAppConfig({
   nuxtIcon: {
     aliases: {
       "icon-menu": "i-material-symbols-menu-rounded",
+      "icon-lang": "i-material-symbols-language-chinese-dayi-rounded",
     },
   },
 
