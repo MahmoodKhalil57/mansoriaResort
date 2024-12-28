@@ -17,8 +17,12 @@ if (langParam || (!langCookie && langAccept)) {
 
 const selectedLang = selectedLanguageCookie.value ?? "en"
 
+const languages = {
+  en: "English",
+  ar: "عربي",
+} as const
 
-const changeLang = (lang) => {
+const changeLang = (lang: keyof typeof languages) => {
   const url = new URL(window.location.href);
   url.searchParams.set('lang', lang);
   window.location.href = url.toString();
@@ -28,18 +32,21 @@ const changeLang = (lang) => {
 <template>
   <div class="drawer drawer-end">
     <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-    <div class="drawer-content">
+    <div class="drawer-content relative">
 
-      <div class="flex justify-between lg:justify-evenly px-10 py-4 text-gray-700 dark:text-gray-200">
+      <header
+        class="fixed flex justify-between items-center lg:justify-evenly px-10 py-4 text-gray-700 dark:text-gray-200 h-[70px] w-full z-10 bg-white">
         <!-- Logo -->
         <NuxtImg src="/botelogonoeat.png" />
         <!-- Navigation -->
-        <div class="text-gray-700 dark:text-gray-200 hidden lg:flex items-center">
+        <nav class="text-gray-700 dark:text-gray-200 hidden lg:flex items-center">
           <NuxtLink v-for="link of navigation" :key="link._path" :to="link._path" active-class="font-bold" class="mr-6">
-            {{ appConfig?.Language?.navigation?.[link?.title?.toLowerCase()]?.[selectedLang] ??
+            {{
+              // @ts-expect-error this is fine
+              appConfig?.Language?.navigation?.[link?.title?.toLowerCase()]?.[selectedLang] ??
               link?.title }}
           </NuxtLink>
-        </div>
+        </nav>
 
         <!-- Social icons & Color Mode -->
         <div class="space-x-3 transition text-gray-500 flex items-center">
@@ -48,8 +55,8 @@ const changeLang = (lang) => {
               <Icon name="icon-lang" class="w-7 h-7" />
             </div>
             <ul tabindex="0" class="dropdown-content menu rounded-box z-[1] shadow bg-white dark:bg-[#1F2937]">
-              <li><a @click="changeLang('en')">English</a></li>
-              <li><a @click="changeLang('ar')">عربي</a></li>
+              <li v-for="languageName, languageKey of languages"><a @click="changeLang(languageKey)">{{ languageName
+                  }}</a></li>
             </ul>
           </div>
 
@@ -60,7 +67,12 @@ const changeLang = (lang) => {
           </label>
 
         </div>
+      </header>
+
+      <div class="w-full h-[70px]">
+
       </div>
+
       <slot />
 
     </div>
@@ -73,13 +85,17 @@ const changeLang = (lang) => {
             <Icon name="icon-cross" class="w-7 h-7" />
           </label>
         </div>
+        <nav>
+          <li v-for="link of navigation" :key="link._path">
+            <NuxtLink :to="link._path" active-class="font-bold" class="mr-6">
+              {{
+                // @ts-expect-error this is
+                appConfig?.Language?.navigation?.[link?.title?.toLowerCase()]?.[selectedLang] ??
+                link?.title }}
+            </NuxtLink>
+          </li>
+        </nav>
         <!-- Sidebar content here -->
-        <li v-for="link of navigation" :key="link._path">
-          <NuxtLink :to="link._path" active-class="font-bold" class="mr-6">
-            {{ appConfig?.Language?.navigation?.[link?.title?.toLowerCase()]?.[selectedLang] ??
-              link?.title }}
-          </NuxtLink>
-        </li>
       </ul>
     </div>
   </div>
