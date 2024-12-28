@@ -19,7 +19,7 @@ const backgroundStyles = computed(() => {
 
 <template>
   <div
-    class="min-h-[70vh] bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center relative gap-10 py-10"
+    class="min-h-[70vh] bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center relative gap-10 py-10 px-5"
     :style="backgroundStyles">
     <h1 class="text-[#FCD46D] text-[57px] text-center my-0 font-Poppins font-semibold"
       style="text-shadow: #ffffff99 1px 1px 1px, #00000099 -1px -1px 1px;">
