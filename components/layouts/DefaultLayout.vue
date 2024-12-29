@@ -33,11 +33,10 @@ const changeLang = (lang: keyof typeof languages) => {
   <div class="drawer drawer-end">
     <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content relative">
-
       <header
         class="fixed flex justify-between items-center lg:justify-evenly px-10 py-4 text-gray-700 dark:text-gray-200 h-[70px] w-full z-10 bg-white">
         <!-- Logo -->
-        <NuxtImg src="/botelogonoeat.png" />
+        <NuxtImg width="53" src="/botelogonoeat.png" class="size-[53px]" />
         <!-- Navigation -->
         <nav class="text-gray-700 dark:text-gray-200 hidden lg:flex items-center">
           <NuxtLink v-for="link of navigation" :key="link._path" :to="link._path" active-class="font-bold" class="mr-6">

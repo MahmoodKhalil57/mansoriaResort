@@ -3,6 +3,8 @@ module.exports = {
     extend: {
       fontFamily: {
         Poppins: ["Poppins", "sans-serif"],
+        InknutAntiqua: ["Inknut Antiqua", "sans-serif"],
+        Playfair: ["Playfair", "serif"],
       }, //end of fontFamily
     },
   },
